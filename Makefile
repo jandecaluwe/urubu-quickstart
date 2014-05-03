@@ -10,4 +10,4 @@ serve:
 	python -m urubu serve
 
 publish:
-	rsync -avr --exclude '.*' --delete _build/ ${GH-PAGES}    
+	git subtree push --prefix _build origin gh-pages    
