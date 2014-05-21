@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Concepts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/css/site.css" rel="stylesheet" media="screen">
+    <link href="/css/syntax.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48968311-4', 'jandecaluwe.com');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Urubu Quickstart</a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-left">
+ 
+            <li><a href="/start.html">Get started</a></li>
+            <li class="active"><a href="/concepts.html">Concepts</a></li>
+            <li><a href="/customize.html">Customize</a></li>
+            <li><a href="/deploy.html">Deploy</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="/demo/" class="dropdown-toggle" data-toggle="dropdown">Demo <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/blog/">Blog demo</a></li>    
+                <li><a href="/manual/">Manual demo</a></li>    
+              </ul>
+            </li>
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+<div class="container">
+
+  <ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+      <li class="active">Concepts</li>
+  </ol>
+
+  <div class="page-header">
+ 
+    <h1>Concepts</h1>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3" role="navigation"> 
+ 
+      <div class="sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="60">
+        <div class="well">
+          <a href="#"><strong>Concepts</strong></a>
+          <div class="toc">
+<ul>
+<li><a href="#website-structure">Website structure</a></li>
+<li><a href="#content-files">Content files</a></li>
+<li><a href="#layouts">Layouts</a></li>
+<li><a href="#reference-ids">Reference ids</a></li>
+<li><a href="#folders">Folders</a></li>
+<li><a href="#navbar">Navbar</a></li>
+</ul>
+</div>
+
+        </div>
+      </div>
+    </div>
+ 
+    <div class="content">
+      <div class="col-md-6" role="main">
+        <p class="lead">This page describes the concepts that you need to develop
+your Urubu project further.</p>
+<h2 id="website-structure">Website structure</h2>
+<p>The website structure matches the project directory structure exactly. This
+feature makes it easy to organize content and to refer to other pages.</p>
+<p>Each file with extension <code>.md</code> is a content file that corresponds to a website
+page. Upon a website build, each content file is compiled into a <code>.html</code> page.
+All other files and directories are copied verbatim to website, except those
+whose names start with an underscore <code>_</code>.</p>
+<h2 id="content-files">Content files</h2>
+<p>A content file starts with a section between triple dashes <code>---</code>.  This is the
+YAML frontmatter with page variables such as <code>title</code> and <code>layout</code>.  </p>
+<p>After the frontmatter follows the actual content. The format is <a href="http://urubu.jandecaluwe.com/manual/authoring.html">Markdown with
+extensions</a>.</p>
+<h2 id="layouts">Layouts</h2>
+<p>Each content file uses the <code>layout</code> variable to specify the look of the 
+page. </p>
+<p>Urubu Quickstart defines a number of layouts. The <code>page</code> layout yields a page
+with a sidebar for the table of contents. If you don't need a sidebar, use the
+<code>simple_page</code> layout.  You can add a simple pager to both layouts by setting
+the <code>pager</code> variable to <code>true</code>. </p>
+<h2 id="reference-ids">Reference ids</h2>
+<p>Reference ids are names that refer to links. In Urubu, the pathname of a page
+or folder (without extension) can be used as its reference id. In addition, the
+<code>reflinks</code> variable in file <code>_site.yml</code> defines reference ids for external
+urls. </p>
+<p>With Urubu, you can use reference ids in Markdown content. It resolves Markdown
+reference links, with syntax <code>[&lt;reference-id&gt;]</code>. </p>
+<h2 id="folders">Folders</h2>
+<p>A project subdirectory maps to a folder on the website.  The folder content is
+defined in the <code>index.md</code> file.  </p>
+<p>The first option is to list the folder content explicitly in <code>content</code>
+variable, as a list of reference ids.  As an example, see <a href="/manual/" title="Manual demo">Manual demo</a>. </p>
+<p>The second option is to specify the content ordering. For example, for a blog
+you would set the <code>order</code> variable to <code>date</code>, and the <code>reverse</code> variable to
+<code>true</code>.  As an example, see <a href="/blog/" title="Blog demo">Blog demo</a>.</p>
+<p>For <code>index.md</code> files, you can use the <code>index</code> layout, which lists the contents
+of the folder.</p>
+<h2 id="navbar">Navbar</h2>
+<p>The navbar at the top is defined by the <code>content</code> variable of the top-level
+<code>index.md</code> file. </p>
+<p>The number of items at the right side of the navbar is defined by the
+<code>navbar_right_items</code> variable. </p>
+<p>A link to a folder in the navbar can optionally be implemented as a dropdown
+menu. Set the <code>dropdown</code> variable to <code>true</code> in the <code>index.md</code> file of the
+folder to enable this feature. As an example, see the <code>demo</code> folder and the
+<code>Demo</code> menu item.</p>
+      </div>
+    </div>
+
+  </div>
+    
+  <ul class="pager">
+    <li class="previous"><a href="/start.html">&larr; Get started</a></li>
+    <li class="next"><a href="/customize.html">Customize &rarr;</a></li>
+  </ul>
+
+    <div class="footer">
+        <p>Website powered by <a href="http://urubu.jandecaluwe.com">Urubu</a></p>
+    </div>
+
+
+</div> 
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
