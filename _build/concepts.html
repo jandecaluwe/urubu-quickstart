@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Organize</title>
+    <title>Concepts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <!-- Bootstrap -->
@@ -45,7 +45,7 @@
           <ul class="nav navbar-nav navbar-left">
  
             <li><a href="/start.html">Get started</a></li>
-            <li><a href="/concepts.html">Concepts</a></li>
+            <li class="active"><a href="/concepts.html">Concepts</a></li>
             <li><a href="/customize.html">Customize</a></li>
             <li><a href="/deploy.html">Deploy</a></li>
           </ul>
@@ -69,12 +69,12 @@
 
   <ol class="breadcrumb">
     <li><a href="/">Home</a></li>
-      <li class="active">Organize</li>
+      <li class="active">Concepts</li>
   </ol>
 
   <div class="page-header">
  
-    <h1>Organize</h1>
+    <h1>Concepts</h1>
   </div>
 
   <div class="row">
@@ -83,13 +83,15 @@
  
       <div class="sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="60">
         <div class="well">
-          <a href="#"><strong>Organize</strong></a>
+          <a href="#"><strong>Concepts</strong></a>
           <div class="toc">
 <ul>
-<li><a href="#navbar">Navbar</a></li>
-<li><a href="#pages">Pages</a></li>
+<li><a href="#website-structure">Website structure</a></li>
+<li><a href="#content-files">Content files</a></li>
+<li><a href="#layouts">Layouts</a></li>
+<li><a href="#reference-ids">Reference ids</a></li>
 <li><a href="#folders">Folders</a></li>
-<li><a href="#external-links">External links</a></li>
+<li><a href="#navbar">Navbar</a></li>
 </ul>
 </div>
 
@@ -99,37 +101,61 @@
  
     <div class="content">
       <div class="col-md-6" role="main">
-        <h2 id="navbar">Navbar</h2>
+        <p class="lead">This page describes the concepts that you need to develop
+your Urubu project further.</p>
+<h2 id="website-structure">Website structure</h2>
+<p>The website structure matches the project directory structure exactly. This
+feature makes it easy to organize content and to refer to other pages.</p>
+<p>Each file with extension <code>.md</code> is a content file that corresponds to a website
+page. Upon a website build, each content file is compiled into a <code>.html</code> page.
+All other files and directories are copied verbatim to website, except those
+whose names start with an underscore <code>_</code>.</p>
+<h2 id="content-files">Content files</h2>
+<p>A content file starts with a section between triple dashes <code>---</code>.  This is the
+YAML frontmatter with page variables such as <code>title</code> and <code>layout</code>.  </p>
+<p>After the frontmatter follows the actual content. The format is <a href="http://urubu.jandecaluwe.com/manual/authoring.html">Markdown with
+extensions</a>.</p>
+<h2 id="layouts">Layouts</h2>
+<p>Each content file uses the <code>layout</code> variable to specify the look of the 
+page. </p>
+<p>Urubu Quickstart defines a number of layouts. The <code>page</code> layout yields a page
+with a sidebar for the table of contents. If you don't need a sidebar, use the
+<code>simple_page</code> layout.  You can add a simple pager to both layouts by setting
+the <code>pager</code> variable to <code>true</code>. </p>
+<h2 id="reference-ids">Reference ids</h2>
+<p>Reference ids are names that refer to links. In Urubu, the pathname of a page
+or folder (without extension) can be used as its reference id. In addition, the
+<code>reflinks</code> variable in file <code>_site.yml</code> defines reference ids for external
+urls. </p>
+<p>With Urubu, you can use reference ids in Markdown content. It resolves Markdown
+reference links, with syntax <code>[&lt;reference-id&gt;]</code>. </p>
+<h2 id="folders">Folders</h2>
+<p>A project subdirectory maps to a folder on the website.  The folder content is
+defined in the <code>index.md</code> file.  </p>
+<p>The first option is to list the folder content explicitly in <code>content</code>
+variable, as a list of reference ids.  As an example, see <a href="/manual/" title="Manual demo">Manual demo</a>. </p>
+<p>The second option is to specify the content ordering. For example, for a blog
+you would set the <code>order</code> variable to <code>date</code>, and the <code>reverse</code> variable to
+<code>true</code>.  As an example, see <a href="/blog/" title="Blog demo">Blog demo</a>.</p>
+<p>For <code>index.md</code> files, you can use the <code>index</code> layout, which lists the contents
+of the folder.</p>
+<h2 id="navbar">Navbar</h2>
 <p>The navbar at the top is defined by the <code>content</code> variable of the top-level
-<code>index.md</code> file.  Its value is a list of reference ids of pages, folders and
-external links.</p>
+<code>index.md</code> file. </p>
 <p>The number of items at the right side of the navbar is defined by the
 <code>navbar_right_items</code> variable. </p>
-<h2 id="pages">Pages</h2>
-<p>Each Markdown file with extension <code>.md</code> corresponds to a page on
-the website. In the YAML frontmatter, you define the title and the
-layout of a page. The default <code>page</code> layout has a sidebar. 
-If you don't need a sidebar, use the <code>simple_page</code> layout. </p>
-<p>You can add a pager setting the <code>pager</code> variable to <code>true</code>.</p>
-<h2 id="folders">Folders</h2>
-<p>A folder is a collection of pages. It is implemented as a subdirectory with
-content files.</p>
-<p>The content of a folder is defined in its <code>index.md</code> file.  One option is to
-list the content explicitly. As an example, see <a href="/manual/" title="Manual demo">Manual demo</a>.  Another option is to
-specify the content ordering. For example, for a blog you would set the <code>order</code>
-variable to <code>date</code>, and the <code>reverse</code> variable to <code>true</code>, as in <a href="/blog/" title="Blog demo">Blog demo</a>.</p>
-<p>A link to a folder refers to its <code>index.html</code> page. In the navbar, you can
-implement it as a dropdown menu instead, by setting the <code>dropdown</code> variable to
-<code>true</code> in the <code>index.md</code> file. See the <code>demo</code> folder and the <code>Demo</code> menu item.</p>
-<h2 id="external-links">External links</h2>
-<p>You can define reference ids for external links in the <code>reflinks</code> variable in
-<code>_site.yml</code>.</p>
+<p>A link to a folder in the navbar can optionally be implemented as a dropdown
+menu. Set the <code>dropdown</code> variable to <code>true</code> in the <code>index.md</code> file of the
+folder to enable this feature. As an example, see the <code>demo</code> folder and the
+<code>Demo</code> menu item.</p>
       </div>
     </div>
 
   </div>
     
   <ul class="pager">
+    <li class="previous"><a href="/start.html">&larr; Get started</a></li>
+    <li class="next"><a href="/customize.html">Customize &rarr;</a></li>
   </ul>
 
     <div class="footer">

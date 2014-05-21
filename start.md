@@ -1,14 +1,25 @@
 ---
-title: Get started 
+title: Get started  
 layout: page 
 pager: true
 ---
 
+
+Urubu Quickstart is a companion site of [urubu], a tool to develop static
+websites.  You can use it set up a new Urubu project quickly. 
+{.lead}
+
+Usage
+=====
+
+Urubu Quickstart is both a starting point and a tutorial.  To use it, follow
+the steps in the next sections and pages.  For in-depth info, consult the
+[urubu_manual].
+
 Install Urubu
 =============
 
-Urubu is a tool to develop static websites. It requires Python 2.7. 
-You can install it using pip: 
+Urubu requires Python 2.7. You can install it using pip: 
 
 ```
 pip install urubu
@@ -19,35 +30,42 @@ instructions][pip_install].
 
 [pip_install]: http://www.pip-installer.org/en/latest/installing.html
 
-Install the Urubu Quickstart site
-=================================
+Install Urubu Quickstart locally
+================================
 
-[Download][urubu_quickstart_archive] the zip archive with
-the Urubu Quickstart source. Unzip and rename the folder
-to the name or your new Urubu project.
+[Download][urubu_quickstart_archive] the zip archive with the Urubu Quickstart
+source and unzip it. The resulting directory is your new project directory.
+Rename it appropriately.  Go into the project directory and run `make` to
+build the website locally.
 
 [urubu_quickstart_archive]: https://github.com/jandecaluwe/urubu-quickstart/archive/master.zip
 
-Build locally
-=============
+*In a separate terminal window*, go into the project directory and run `make
+serve`.  This starts a local web server for the locally built website.  You can
+view it in a browser on [localhost:8000](http://localhost:8000).  Note that it
+is identical to [urubu_quickstart_site]. 
 
-In the top folder, type `make` to build the website locally.
+You are now ready to make changes. Keep the local webserver running while
+making changes.
 
-*In a separate terminal window*, go into the top folder and type `make serve`.
-This starts a local web server for the locally built website.
-You can view it in a browser on [localhost:8000](http://localhost:8000).
-Note that it is identical to [urubu_quickstart_site]. 
+Set the brand name
+==================
 
-You can develop your project by make local changes.
-Keep the local webserver running as long as you are
-making changes to the project.
+The file `_site.yml` contains project configuration variables.  As a first
+change, edit `_site.yml` and set the `brand` variable to the name of your
+project. Run `make` and the verify the change in the browser, at the left side
+in the top navbar. 
 
-Set the project name
-====================
+Adapt the home page
+===================
 
-Open the `_site.yml` file in the top folder. It contains configuration
-info for the project in YAML format.
+The `index.md` file corresponds to the home page of the site. It has a `title`
+and the `tagline` variable are displayed prominently. Adapt them
+to your project, run `make` and verify the changes.
 
-As a first change, set the `brand` variable to the name of your project.
-Type `make` again, and check the change in the browser.
+A unique Urubu feature is the way in which it resolves Markdown reference
+links, specified by the syntax `[<reference-id>]` You can easily refer to other
+pages by using the pathname of pages or folders (without extension) as
+reference ids. You can also use reference ids that are defined in the
+`reflinks` variable in `_site.yml`.
 

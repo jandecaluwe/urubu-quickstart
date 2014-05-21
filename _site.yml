@@ -3,9 +3,12 @@ brand: Urubu Quickstart
 bootswatch: null # flatly, yeti, lumen,... 
 navbar_inverse: false 
 bootstrap: 3.1.1
-navbar_right_items: 2
+navbar_right_items: 1
 
 reflinks:
+    urubu:
+        url: http://urubu.jandecaluwe.com
+        title: Urubu
     urubu_manual:
         url: http://urubu.jandecaluwe.com/manual
         title: Urubu Manual 
