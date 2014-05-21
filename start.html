@@ -45,7 +45,7 @@
           <ul class="nav navbar-nav navbar-left">
  
             <li class="active"><a href="/start.html">Get started</a></li>
-            <li><a href="/organize.html">Organize</a></li>
+            <li><a href="/concepts.html">Concepts</a></li>
             <li><a href="/customize.html">Customize</a></li>
             <li><a href="/deploy.html">Deploy</a></li>
           </ul>
@@ -58,7 +58,6 @@
                 <li><a href="/manual/">Manual demo</a></li>    
               </ul>
             </li>
-            <li><a href="http://urubu.jandecaluwe.com/manual">Urubu Manual</a></li>
           </ul>
 
         </div><!--/.nav-collapse -->
@@ -87,10 +86,11 @@
           <a href="#"><strong>Get started</strong></a>
           <div class="toc">
 <ul>
+<li><a href="#usage">Usage</a></li>
 <li><a href="#install-urubu">Install Urubu</a></li>
-<li><a href="#install-the-urubu-quickstart-site">Install the Urubu Quickstart site</a></li>
-<li><a href="#build-locally">Build locally</a></li>
-<li><a href="#set-the-project-name">Set the project name</a></li>
+<li><a href="#install-urubu-quickstart-locally">Install Urubu Quickstart locally</a></li>
+<li><a href="#set-the-brand-name">Set the brand name</a></li>
+<li><a href="#adapt-the-home-page">Adapt the home page</a></li>
 </ul>
 </div>
 
@@ -100,40 +100,52 @@
  
     <div class="content">
       <div class="col-md-6" role="main">
-        <h2 id="install-urubu">Install Urubu</h2>
-<p>Urubu is a tool to develop static websites. It requires Python 2.7. 
-You can install it using pip: </p>
+        <p class="lead">Urubu Quickstart is a companion site of <a href="http://urubu.jandecaluwe.com" title="Urubu">Urubu</a>, a tool to develop static
+websites.  You can use it set up a new Urubu project quickly. </p>
+<h2 id="usage">Usage</h2>
+<p>Urubu Quickstart is both a starting point and a tutorial.  To use it, follow
+the steps in the next sections and pages.  For in-depth info, consult the
+<a href="http://urubu.jandecaluwe.com/manual" title="Urubu Manual">Urubu Manual</a>.</p>
+<h2 id="install-urubu">Install Urubu</h2>
+<p>Urubu requires Python 2.7. You can install it using pip: </p>
 <div class="codehilite"><pre>pip install urubu
 </pre></div>
 
 
 <p>If pip is not yet available on your system, follow the <a href="http://www.pip-installer.org/en/latest/installing.html">pip installation
 instructions</a>.</p>
-<h2 id="install-the-urubu-quickstart-site">Install the Urubu Quickstart site</h2>
-<p><a href="https://github.com/jandecaluwe/urubu-quickstart/archive/master.zip">Download</a> the zip archive with
-the Urubu Quickstart source. Unzip and rename the folder
-to the name or your new Urubu project.</p>
-<h2 id="build-locally">Build locally</h2>
-<p>In the top folder, type <code>make</code> to build the website locally.</p>
-<p><em>In a separate terminal window</em>, go into the top folder and type <code>make serve</code>.
-This starts a local web server for the locally built website.
-You can view it in a browser on <a href="http://localhost:8000">localhost:8000</a>.
-Note that it is identical to <a href="http://urubu-quickstart.jandecaluwe.com" title="Urubu Quickstart site">Urubu Quickstart site</a>. </p>
-<p>You can develop your project by make local changes.
-Keep the local webserver running as long as you are
-making changes to the project.</p>
-<h2 id="set-the-project-name">Set the project name</h2>
-<p>Open the <code>_site.yml</code> file in the top folder. It contains configuration
-info for the project in YAML format.</p>
-<p>As a first change, set the <code>brand</code> variable to the name of your project.
-Type <code>make</code> again, and check the change in the browser.</p>
+<h2 id="install-urubu-quickstart-locally">Install Urubu Quickstart locally</h2>
+<p><a href="https://github.com/jandecaluwe/urubu-quickstart/archive/master.zip">Download</a> the zip archive with the Urubu Quickstart
+source and unzip it. The resulting directory is your new project directory.
+Rename it appropriately.  Go into the project directory and run <code>make</code> to
+build the website locally.</p>
+<p><em>In a separate terminal window</em>, go into the project directory and run <code>make
+serve</code>.  This starts a local web server for the locally built website.  You can
+view it in a browser on <a href="http://localhost:8000">localhost:8000</a>.  Note that it
+is identical to <a href="http://urubu-quickstart.jandecaluwe.com" title="Urubu Quickstart site">Urubu Quickstart site</a>. </p>
+<p>You are now ready to make changes. Keep the local webserver running while
+making changes.</p>
+<h2 id="set-the-brand-name">Set the brand name</h2>
+<p>The file <code>_site.yml</code> contains project configuration variables.  As a first
+change, edit <code>_site.yml</code> and set the <code>brand</code> variable to the name of your
+project. Run <code>make</code> and the verify the change in the browser, at the left side
+in the top navbar. </p>
+<h2 id="adapt-the-home-page">Adapt the home page</h2>
+<p>The <code>index.md</code> file corresponds to the home page of the site. It has a <code>title</code>
+and the <code>tagline</code> variable are displayed prominently. Adapt them
+to your project, run <code>make</code> and verify the changes.</p>
+<p>A unique Urubu feature is the way in which it resolves Markdown reference
+links, specified by the syntax <code>[&lt;reference-id&gt;]</code> You can easily refer to other
+pages by using the pathname of pages or folders (without extension) as
+reference ids. You can also use reference ids that are defined in the
+<code>reflinks</code> variable in <code>_site.yml</code>.</p>
       </div>
     </div>
 
   </div>
     
   <ul class="pager">
-    <li class="next"><a href="/organize.html">Organize &rarr;</a></li>
+    <li class="next"><a href="/concepts.html">Concepts &rarr;</a></li>
   </ul>
 
     <div class="footer">

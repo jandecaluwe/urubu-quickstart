@@ -45,7 +45,7 @@
           <ul class="nav navbar-nav navbar-left">
  
             <li><a href="/start.html">Get started</a></li>
-            <li><a href="/organize.html">Organize</a></li>
+            <li><a href="/concepts.html">Concepts</a></li>
             <li class="active"><a href="/customize.html">Customize</a></li>
             <li><a href="/deploy.html">Deploy</a></li>
           </ul>
@@ -58,7 +58,6 @@
                 <li><a href="/manual/">Manual demo</a></li>    
               </ul>
             </li>
-            <li><a href="http://urubu.jandecaluwe.com/manual">Urubu Manual</a></li>
           </ul>
 
         </div><!--/.nav-collapse -->
@@ -81,16 +80,45 @@
   <div class="row">
 
     <div class="col-md-3" role="navigation"> 
+ 
+      <div class="sidebar" data-spy="affix" data-offset-top="80" data-offset-bottom="60">
+        <div class="well">
+          <a href="#"><strong>Customize</strong></a>
+          <div class="toc">
+<ul>
+<li><a href="#theme">Theme</a></li>
+<li><a href="#footer">Footer</a></li>
+<li><a href="#advanced">Advanced</a></li>
+</ul>
+</div>
+
+        </div>
+      </div>
     </div>
  
     <div class="content">
       <div class="col-md-6" role="main">
-        
+        <h2 id="theme">Theme</h2>
+<p>The default theme of Urubu Quickstart is based on the stock <a href="http://getbootstrap.com" title="Bootstrap">Bootstrap</a> theme.</p>
+<p>You can easily get a different look and feel thanks to <a href="http://bootswatch.com" title="Bootswatch">Bootswatch</a> This
+project develops a number of themes as drop-in replacements for Bootstrap.
+Simply set the <code>bootswatch</code> variable in <code>_site.yml</code> to the name of the desired
+theme, such as <code>flatly</code>, <code>yeti</code> or <code>lumen</code>.</p>
+<p>Within a theme, you can change the look of the navbar by setting
+<code>navbar_inverse</code> to <code>true</code>.</p>
+<h2 id="footer">Footer</h2>
+<p>You can customize the content of the page footer
+in the <code>_layout/footer.html</code> file.</p>
+<h2 id="advanced">Advanced</h2>
       </div>
     </div>
 
   </div>
     
+  <ul class="pager">
+    <li class="previous"><a href="/concepts.html">&larr; Concepts</a></li>
+    <li class="next"><a href="/deploy.html">Deploy &rarr;</a></li>
+  </ul>
 
     <div class="footer">
         <p>Website powered by <a href="http://urubu.jandecaluwe.com">Urubu</a></p>
