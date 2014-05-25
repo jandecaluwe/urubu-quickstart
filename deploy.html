@@ -82,27 +82,26 @@
  
     <div class="content">
       <div class="col-md-6" role="main">
-        <p>The website is build in the <code>_build</code> subdirectory.  To deploy it, you must
-transfer its contents to the production web server.  There are many
-possibilities to do this, and an exhaustive overview is beyond the scope of
-this site..</p>
-<p>Instead, we will describe one possibility which is particularly elegant. This
-is the method used for Urubu Quickstart itself.</p>
+        <p>The website is built in the <code>_build</code> subdirectory.  To deploy it, you must
+transfer the contents of that subdirectory to the production web server.  There
+are many ways to do this.  An exhaustive overview is beyond the scope of this
+site, but we will describe one technique which is particularly elegant. This is
+the method used for Urubu Quickstart itself.</p>
 <p>Urubu Quickstart is developed using git and hosted on <a href="https://github.com/jandecaluwe/urubu-quickstart">GitHub</a>.  GitHub
-offers <a href="http://pages.github.com/">GitHub Pages</a> which is the possibility to host websites from the
-project repository itself.  Technically, this is accomplished by maintaining
-the content on a specific branch, called <code>gh-pages</code>.</p>
-<p>With git, this can be accomplished with the following command:</p>
+offers <a href="http://pages.github.com/">GitHub Pages</a> as a way to host websites from the project repository
+itself.  Technically, this is accomplished by maintaining the website content
+on a specific branch, called <code>gh-pages</code>.</p>
+<p>If you use git and GitHub, you can deploy your website to GitHub
+pages with the following command:</p>
 <div class="codehilite"><pre>git subtree push --prefix _build origin gh-pages    
 </pre></div>
 
 
-<p>When the <code>gh-pages</code> branch does not exist yet it will be created,
-so you can also use this command to start up the site.
+<p>When the <code>gh-pages</code> branch does not exist yet it will be created.
 It is a good idea to put the command in the Makefile to make it
 easy to use. </p>
-<p>The website will be published automatically at
-<code>http://&lt;username&gt;.github.io/&lt;repository&gt;</code>.  You can also use a custom url. </p>
+<p>The website will be published at <code>http://&lt;username&gt;.github.io/&lt;repository&gt;</code>.
+You can also use a custom url. </p>
       </div>
     </div>
 
