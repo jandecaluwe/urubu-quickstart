@@ -63,9 +63,3 @@ The `index.md` file corresponds to the home page of the site. It has a `title`
 and the `tagline` variable are displayed prominently. Adapt them
 to your project, run `make` and verify the changes.
 
-A unique Urubu feature is the way in which it resolves Markdown reference
-links, specified by the syntax `[<reference-id>]` You can easily refer to other
-pages by using the pathname of pages or folders (without extension) as
-reference ids. You can also use reference ids that are defined in the
-`reflinks` variable in `_site.yml`.
-

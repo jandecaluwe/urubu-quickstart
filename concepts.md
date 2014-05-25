@@ -50,8 +50,8 @@ or folder (without extension) can be used as its reference id. In addition, the
 `reflinks` variable in file `_site.yml` defines reference ids for external
 urls. 
 
-With Urubu, you can use reference ids in Markdown content. It resolves Markdown
-reference links, with syntax `[<reference-id>]`. 
+Urubu resolves reference ids in Markdown content, specified by
+the syntax `[<reference-id>]`. 
 
 Folders
 =======

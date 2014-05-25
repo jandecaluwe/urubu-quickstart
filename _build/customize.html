@@ -100,16 +100,31 @@
       <div class="col-md-6" role="main">
         <h2 id="theme">Theme</h2>
 <p>The default theme of Urubu Quickstart is based on the stock <a href="http://getbootstrap.com" title="Bootstrap">Bootstrap</a> theme.</p>
-<p>You can easily get a different look and feel thanks to <a href="http://bootswatch.com" title="Bootswatch">Bootswatch</a> This
+<p>You can easily get a different look and feel thanks to <a href="http://bootswatch.com" title="Bootswatch">Bootswatch</a>. This
 project develops a number of themes as drop-in replacements for Bootstrap.
 Simply set the <code>bootswatch</code> variable in <code>_site.yml</code> to the name of the desired
-theme, such as <code>flatly</code>, <code>yeti</code> or <code>lumen</code>.</p>
-<p>Within a theme, you can change the look of the navbar by setting
-<code>navbar_inverse</code> to <code>true</code>.</p>
+Bootswatch theme, such as <code>flatly</code>, <code>yeti</code> or <code>lumen</code>.</p>
+<p>You can also change the look of the navbar by setting <code>navbar_inverse</code> to
+<code>true</code>.</p>
 <h2 id="footer">Footer</h2>
-<p>You can customize the content of the page footer
-in the <code>_layout/footer.html</code> file.</p>
+<p>You can customize the content of the page footer in the <code>_layout/footer.html</code>
+file.</p>
 <h2 id="advanced">Advanced</h2>
+<p>Urubu and the the technologies behind it offer a wide range of customization
+options. On this site we can only briefly describe some possibilities. </p>
+<p>All layouts are defined in the <em>_layout</em> subdirectory.  They are implemented as
+<a href="http://jinja.pocoo.org" title="Jinja2">Jinja2 Templates</a>.  You can modify existing layouts or create new
+ones.</p>
+<p>A layout can <em>inherit</em> from a parent layout. This means that it can implement
+just the desired feature and reuse everything else from the parent.  In Urubu
+Quickstart, all layouts inherit from <code>_base.html</code>, which defines the general
+look of the website.  Likewise, when you implement services such as Disqus or
+Google Analytics in a layout, they are available in all child layouts.</p>
+<p>Urubu was designed to work well with <a href="http://getbootstrap.com" title="Bootstrap">Bootstrap</a>, a framework of ready-to-use
+website components, style sheets and javascript functions. You can use
+Bootstrap features to customize your layouts.  A more advanced and complex
+option would be to use another framework altogether.</p>
+<p>For more info on customization, start from the <a href="http://urubu.jandecaluwe.com/manual" title="Urubu Manual">Urubu Manual</a>.</p>
       </div>
     </div>
 
