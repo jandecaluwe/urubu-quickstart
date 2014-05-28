@@ -110,21 +110,17 @@ Bootswatch theme, such as <code>flatly</code>, <code>yeti</code> or <code>lumen<
 <p>You can customize the content of the page footer in the <code>_layout/footer.html</code>
 file.</p>
 <h2 id="advanced">Advanced</h2>
-<p>Urubu and the the technologies behind it offer a wide range of customization
+<p>Urubu and the technologies behind it offer a wide range of customization
 options. On this site we can only briefly describe some possibilities. </p>
-<p>All layouts are defined in the <em>_layout</em> subdirectory.  They are implemented as
+<p>All layouts are defined in the <code>_layout</code> subdirectory.  They are implemented as
 <a href="http://jinja.pocoo.org" title="Jinja2">Jinja2 Templates</a>.  You can modify existing layouts or create new
-ones.</p>
-<p>A layout can <em>inherit</em> from a parent layout. This means that it can implement
-just the desired feature and reuse everything else from the parent.  In Urubu
-Quickstart, all layouts inherit from <code>_base.html</code>, which defines the general
-look of the website.  Likewise, when you implement services such as Disqus or
-Google Analytics in a layout, they are available in all child layouts.</p>
+ones. You can use <em>template inheritance</em> to implement just the desired feature
+in a layout, and reuse everything else from the parent layout. </p>
 <p>Urubu was designed to work well with <a href="http://getbootstrap.com" title="Bootstrap">Bootstrap</a>, a framework of ready-to-use
 website components, style sheets and javascript functions. You can use
-Bootstrap features to customize your layouts.  A more advanced and complex
-option would be to use another framework altogether.</p>
-<p>For more info on customization, start from the <a href="http://urubu.jandecaluwe.com/manual" title="Urubu Manual">Urubu Manual</a>.</p>
+Bootstrap features to customize your layouts. Alternatively, you can switch to
+another framework altogether.</p>
+<p>For more info on customization, start by reading the <a href="http://urubu.jandecaluwe.com/manual" title="Urubu Manual">Urubu Manual</a>.</p>
       </div>
     </div>
 
