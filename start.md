@@ -46,7 +46,7 @@ view it in a browser on [localhost:8000](http://localhost:8000).  Note that it
 is identical to [urubu_quickstart_site]. 
 
 You are now ready to make changes. Keep the local webserver running while
-making changes.
+making changes, so that you can verify them in the browser.
 
 Set the brand name
 ==================

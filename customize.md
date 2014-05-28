@@ -26,22 +26,17 @@ file.
 Advanced
 ========
 
-Urubu and the the technologies behind it offer a wide range of customization
+Urubu and the technologies behind it offer a wide range of customization
 options. On this site we can only briefly describe some possibilities. 
 
-All layouts are defined in the *_layout* subdirectory.  They are implemented as
+All layouts are defined in the `_layout` subdirectory.  They are implemented as
 [Jinja2 Templates][jinja2].  You can modify existing layouts or create new
-ones.
-
-A layout can *inherit* from a parent layout. This means that it can implement
-just the desired feature and reuse everything else from the parent.  In Urubu
-Quickstart, all layouts inherit from `_base.html`, which defines the general
-look of the website.  Likewise, when you implement services such as Disqus or
-Google Analytics in a layout, they are available in all child layouts.
+ones. You can use *template inheritance* to implement just the desired feature
+in a layout, and reuse everything else from the parent layout. 
 
 Urubu was designed to work well with [bootstrap], a framework of ready-to-use
 website components, style sheets and javascript functions. You can use
-Bootstrap features to customize your layouts.  A more advanced and complex
-option would be to use another framework altogether.
+Bootstrap features to customize your layouts. Alternatively, you can switch to
+another framework altogether.
 
-For more info on customization, start from the [urubu_manual].
+For more info on customization, start by reading the [urubu_manual].

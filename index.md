@@ -8,5 +8,5 @@ content:
     - deploy
     - demo
 tagline:
-    Set up your new Urubu Project quickly
+    Set up your new Urubu project quickly
 ---
