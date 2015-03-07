@@ -60,6 +60,6 @@ Adapt the home page
 ===================
 
 The `index.md` file corresponds to the home page of the site. It has a `title`
-and the `tagline` variable are displayed prominently. Adapt them
-to your project, run `make` and verify the changes.
+and the `tagline` variable that are displayed prominently. Adapt them to your
+project, run `make` and verify the changes.
 
