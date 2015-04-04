@@ -1,6 +1,6 @@
 ---
 title: Introduction 
-layout: simple_page 
+layout: page 
 pager: true
 ---
 

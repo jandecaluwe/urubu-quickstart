@@ -1,6 +1,6 @@
 ---
 title: Deploy 
-layout: simple_page 
+layout: page 
 ---
 
 The website is built in the `_build` subdirectory.  To deploy it, you must
