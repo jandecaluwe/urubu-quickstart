@@ -3,9 +3,10 @@ title: Urubu Quickstart
 layout: home 
 content:
     - start
-    - concepts 
+    - content
     - customize
     - deploy
+    - advanced
     - demo
 tagline:
     Set up your new Urubu project quickly

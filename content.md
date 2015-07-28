@@ -1,12 +1,12 @@
 ---
-title: Concepts 
+title: Add content
 layout: page 
 pager: true
 ---
 
 
-This page describes the concepts that you need to develop
-your Urubu project further.
+This page describes the concepts that you need to
+add content to your Urubu project.
 {.lead}
 
 Website structure
