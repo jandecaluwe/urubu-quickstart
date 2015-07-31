@@ -1,6 +1,7 @@
 ---
 title: Deploy 
 layout: page 
+pager: true
 ---
 
 This page describes a way to deploy the website.
