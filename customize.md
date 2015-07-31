@@ -4,6 +4,9 @@ layout: page
 pager: true
 ---
 
+This page describes some ways to customize the website.
+{.lead} 
+
 Theme
 =====
 
@@ -14,6 +17,17 @@ project develops a number of themes as drop-in replacements for Bootstrap.
 Simply set the `bootswatch` variable in `_site.yml` to the name of the desired
 Bootswatch theme, such as `flatly`, `yeti` or `lumen`.
 
+Navbar
+======
+
+The number of items at the right side of the navbar is defined by the
+`navbar_right_items` variable. 
+
+A link to a folder in the navbar can optionally be implemented as a dropdown
+menu. Set the `dropdown` variable to `true` in the `index.md` file of the
+folder to enable this feature. As an example, see the `demo` folder and the
+`Demo` menu item.
+
 You can also change the look of the navbar by setting `navbar_inverse` to
 `true`.
 
@@ -23,20 +37,14 @@ Footer
 You can customize the content of the page footer in the `_layout/footer.html`
 file.
 
-Advanced
-========
+Pager
+=====
 
-Urubu and the technologies behind it offer a wide range of customization
-options. On this site we can only briefly describe some possibilities. 
+You can add a simple pager to the `page` and `simple_page` layouts by setting
+the `pager` variable to `true`. 
 
-All layouts are defined in the `_layout` subdirectory.  They are implemented as
-[Jinja2 Templates][jinja2].  You can modify existing layouts or create new
-ones. You can use *template inheritance* to implement just the desired feature
-in a layout, and reuse everything else from the parent layout. 
+More info
+=========
 
-Urubu was designed to work well with [bootstrap], a framework of ready-to-use
-website components, style sheets and javascript functions. You can use
-Bootstrap features to customize your layouts. Alternatively, you can switch to
-another framework altogether.
+For more info on customization possibilties, check the [advanced] page.
 
-For more info on customization, start by reading the [urubu_manual].

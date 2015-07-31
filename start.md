@@ -4,7 +4,6 @@ layout: page
 pager: true
 ---
 
-
 Urubu Quickstart is a companion site of [urubu], a tool to develop static
 websites.  You can use it set up a new Urubu project quickly. 
 {.lead}
@@ -12,9 +11,8 @@ websites.  You can use it set up a new Urubu project quickly.
 Usage
 =====
 
-Urubu Quickstart is both a starting point and a tutorial.  To use it, follow
-the steps in the next sections and pages.  For in-depth info, consult the
-[urubu_manual].
+Urubu Quickstart is both a starting point and a tutorial. Just follow
+the steps in the next sections and pages. 
 
 Install Urubu
 =============

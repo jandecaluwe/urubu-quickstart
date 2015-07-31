@@ -3,6 +3,9 @@ title: Deploy
 layout: page 
 ---
 
+This page describes a way to deploy the website.
+{.lead}
+
 The website is built in the `_build` subdirectory.  To deploy it, you must
 transfer the contents of that subdirectory to the production web server.  There
 are many ways to do this.  An exhaustive overview is beyond the scope of this
