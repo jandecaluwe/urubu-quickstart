@@ -88,8 +88,8 @@ add content to your Urubu project.</p>
 feature makes it easy to organize content and to refer to other pages.</p>
 <p>Each file with extension <code>.md</code> is a content file that corresponds to a website
 page. Upon a website build, each content file is compiled into a <code>.html</code> page.
-All other files and directories are copied verbatim to website, except those
-whose names start with an underscore <code>_</code>.</p>
+All other files and directories are copied to the website, except those whose
+names start with an underscore <code>_</code>.</p>
 <h2 id="content-files">Content files</h2>
 <p>A content file starts with a section between triple dashes <code>---</code>.  This is the
 YAML frontmatter with page variables such as <code>title</code> and <code>layout</code>.  </p>
@@ -100,34 +100,26 @@ extensions</a>.</p>
 page. </p>
 <p>Urubu Quickstart defines a number of layouts. The <code>page</code> layout yields a page
 with a sidebar for the table of contents. If you don't need a sidebar, use the
-<code>simple_page</code> layout.  You can add a simple pager to both layouts by setting
-the <code>pager</code> variable to <code>true</code>. </p>
+<code>simple_page</code> layout.  </p>
 <h2 id="reference-ids">Reference ids</h2>
+<p>Urubu resolves <em>reference ids</em> in Markdown content, specified by
+the syntax <code>[&lt;reference-id&gt;]</code>. </p>
 <p>Reference ids are names that refer to links. In Urubu, the pathname of a page
 or folder (without extension) can be used as its reference id. In addition, the
 <code>reflinks</code> variable in file <code>_site.yml</code> defines reference ids for external
 urls. </p>
-<p>Urubu resolves reference ids in Markdown content, specified by
-the syntax <code>[&lt;reference-id&gt;]</code>. </p>
 <h2 id="folders">Folders</h2>
 <p>A project subdirectory maps to a folder on the website.  The folder content is
-defined in the <code>index.md</code> file.  </p>
-<p>The first option is to list the folder content explicitly in <code>content</code>
-variable, as a list of reference ids.  As an example, see <a href="/manual/" title="Manual demo">Manual demo</a>. </p>
-<p>The second option is to specify the content ordering. For example, for a blog
-you would set the <code>order</code> variable to <code>date</code>, and the <code>reverse</code> variable to
-<code>true</code>.  As an example, see <a href="/blog/" title="Blog demo">Blog demo</a>.</p>
+defined in the <code>index.md</code> file.  The first option is to list the folder content
+explicitly in <code>content</code> variable, as a list of reference ids.  As an example,
+see <a href="/manual/" title="Manual demo">Manual demo</a>.  The second option is to specify the content ordering. For
+example, for a blog you would set the <code>order</code> variable to <code>date</code>, and the
+<code>reverse</code> variable to <code>true</code>.  As an example, see <a href="/blog/" title="Blog demo">Blog demo</a>.</p>
 <p>For <code>index.md</code> files, you can use the <code>index</code> layout, which lists the contents
 of the folder.</p>
 <h2 id="navbar">Navbar</h2>
 <p>The navbar at the top is defined by the <code>content</code> variable of the top-level
 <code>index.md</code> file. </p>
-<p>The number of items at the right side of the navbar is defined by the
-<code>navbar_right_items</code> variable. </p>
-<p>A link to a folder in the navbar can optionally be implemented as a dropdown
-menu. Set the <code>dropdown</code> variable to <code>true</code> in the <code>index.md</code> file of the
-folder to enable this feature. As an example, see the <code>demo</code> folder and the
-<code>Demo</code> menu item.</p>
       </div>
     </div>
 
