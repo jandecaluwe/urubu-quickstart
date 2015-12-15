@@ -1,0 +1,100 @@
+{
+    "pages": [
+        {
+            "tags": "", 
+            "text": "This page describes the concepts that you need to\nadd content to your Urubu project. Website structure The website structure matches the project directory structure exactly. This\nfeature makes it easy to organize content and to refer to other pages. Each file with extension .md is a content file that corresponds to a website\npage. Upon a website build, each content file is compiled into a .html page.\nAll other files and directories are copied to the website, except those whose\nnames start with an underscore _ . Content files A content file starts with a section between triple dashes --- .  This is the\nYAML frontmatter with page variables such as title and layout . After the frontmatter follows the actual content. The format is Markdown with\nextensions . Layouts Each content file uses the layout variable to specify the look of the \npage. Urubu Quickstart defines a number of layouts. The page layout yields a page\nwith a sidebar for the table of contents. If you don't need a sidebar, use the simple_page layout. Reference ids Urubu resolves reference ids in Markdown content, specified by\nthe syntax [<reference-id>] . Reference ids are names that refer to links. In Urubu, the pathname of a page\nor folder (without extension) can be used as its reference id. In addition, the reflinks variable in file _site.yml defines reference ids for external\nurls. Folders A project subdirectory maps to a folder on the website.  The folder content is\ndefined in the index.md file.  The first option is to list the folder content\nexplicitly in content variable, as a list of reference ids.  As an example,\nsee Manual demo .  The second option is to specify the content ordering. For\nexample, for a blog you would set the order variable to date , and the reverse variable to true .  As an example, see Blog demo . For index.md files, you can use the index layout, which lists the contents\nof the folder. Navbar The navbar at the top is defined by the content variable of the top-level index.md file.", 
+            "title": "Add content", 
+            "url": "/content.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "", 
+            "title": "Search", 
+            "url": "/search.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "This page describes some ways to customize the website. Theme The default theme of Urubu Quickstart is based on the stock Bootstrap theme. You can easily get a different look and feel thanks to Bootswatch . This\nproject develops a number of themes as drop-in replacements for Bootstrap.\nSimply set the bootswatch variable in _site.yml to the name of the desired\nBootswatch theme, such as flatly , yeti or lumen . Navbar The number of items at the right side of the navbar is defined by the navbar_right_items variable. A link to a folder in the navbar can optionally be implemented as a dropdown\nmenu. Set the dropdown variable to true in the index.md file of the\nfolder to enable this feature. As an example, see the demo folder and the Demo menu item. You can also change the look of the navbar by setting navbar_inverse to true . Footer You can customize the content of the page footer in the _layout/footer.html file. Pager You can add a simple pager to the page and simple_page layouts by setting\nthe pager variable to true . More info For more info on customization possibilties, check the Advanced features page.", 
+            "title": "Customize", 
+            "url": "/customize.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "", 
+            "title": "Urubu Quickstart", 
+            "url": "/index.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "Urubu Quickstart is a companion site of Urubu , a tool to develop static\nwebsites.  You can use it set up a new Urubu project quickly. Usage Urubu Quickstart is both a starting point and a tutorial. Just follow\nthe steps in the next sections and pages. Install Urubu Urubu requires Python 2.7. You can install it using pip: pip install urubu If pip is not yet available on your system, follow the pip installation\ninstructions . Install Urubu Quickstart locally Download the zip archive with the Urubu Quickstart\nsource and unzip it. The resulting directory is your new project directory.\nRename it appropriately.  Go into the project directory and run make to\nbuild the website locally. In a separate terminal window , go into the project directory and run make\nserve .  This starts a local web server for the locally built website.  You can\nview it in a browser on localhost:8000 .  Note that it\nis identical to Urubu Quickstart site . You are now ready to make changes. Keep the local webserver running while\nmaking changes, so that you can verify them in the browser. Set the brand name The file _site.yml contains project configuration variables.  As a first\nchange, edit _site.yml and set the brand variable to the name of your\nproject. Run make and the verify the change in the browser, at the left side\nin the top navbar. Adapt the home page The index.md file corresponds to the home page of the site. It has a title and the tagline variable that are displayed prominently. Adapt them to your\nproject, run make and verify the changes.", 
+            "title": "Start", 
+            "url": "/start.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "Navbar The navbar at the top is defined by the content variable of the top-level index.md file.  Its value is a list of reference ids of pages, folders and\nexternal links. The number of items at the right side of the navbar is defined by the navbar_right_items variable. Pages Each Markdown file with extension .md corresponds to a page on\nthe website. In the YAML frontmatter, you define the title and the\nlayout of a page. The default page layout has a sidebar. \nIf you don't need a sidebar, use the simple_page layout. You can add a pager setting the pager variable to true . Folders A folder is a collection of pages. It is implemented as a subdirectory with\ncontent files. The content of a folder is defined in its index.md file.  One option is to\nlist the content explicitly. As an example, see Manual demo .  Another option is to\nspecify the content ordering. For example, for a blog you would set the order variable to date , and the reverse variable to true , as in Blog demo . A link to a folder refers to its index.html page. In the navbar, you can\nimplement it as a dropdown menu instead, by setting the dropdown variable to true in the index.md file. See the demo folder and the Demo menu item. External links You can define reference ids for external links in the reflinks variable in _site.yml .", 
+            "title": "Organize", 
+            "url": "/organize.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "Urubu and the technologies behind it offer a wide range of\nadditional features. On this page we list some possibilities. Layouts All layouts are defined in the _layout subdirectory.  They are implemented as Jinja2 Templates .  You can modify existing layouts or create new\nones. You can use template inheritance to implement just the desired feature\nin a layout, and reuse everything else from the parent layout. Bootstrap Urubu was designed to work well with Bootstrap , a framework of ready-to-use\nwebsite components, style sheets and javascript functions. You can use\nBootstrap features to customize your layouts. Alternatively, you can switch to\nanother framework altogether. Search Urubu supports Tipue Search , an open source search solution\nbased on Javascript in the browser. Urubu Quickstart has this feature set up.\nTo learn more, read the chapter Search in the manual. Tags Urubu supports tags. This is described in the manual . Formulas If you would like to create beautiful formulas in your\nUrubu website, check this post . More info For more info, start by reading the Urubu Manual .", 
+            "title": "Advanced features", 
+            "url": "/advanced.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "This page describes a way to deploy the website. The website is built in the _build subdirectory.  To deploy it, you must\ntransfer the contents of that subdirectory to the production web server.  There\nare many ways to do this.  An exhaustive overview is beyond the scope of this\nsite, but we will describe one technique which is particularly elegant. This is\nthe method used for Urubu Quickstart itself. Urubu Quickstart is developed using git and hosted on GitHub .  GitHub\noffers GitHub Pages as a way to host websites from the project repository\nitself.  Technically, this is accomplished by maintaining the website content\non a specific branch, called gh-pages . If you use git and GitHub, you can deploy your website to GitHub\npages with the following command: git subtree push --prefix _build origin gh-pages When the gh-pages branch does not exist yet it will be created.\nIt is a good idea to put the command in the Makefile to make it\neasy to use. The website will be published at http://<username>.github.io/<repository> .\nYou can also use a custom url.", 
+            "title": "Deploy", 
+            "url": "/deploy.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "", 
+            "title": "Latest post", 
+            "url": "/blog/latest_post.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "", 
+            "title": "Oldest post", 
+            "url": "/blog/oldest_post.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "Latest post 15-May-2014", 
+            "title": "Blog demo", 
+            "url": "/blog/index.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "Advanced features Blog demo Manual demo", 
+            "title": "More", 
+            "url": "/more/index.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "First paragraph. Second paragraph.", 
+            "title": "Introduction", 
+            "url": "/manual/intro.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "First section Second Section", 
+            "title": "First Chapter", 
+            "url": "/manual/chapter_1.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "Introduction First Chapter Second Chapter", 
+            "title": "Manual demo", 
+            "url": "/manual/index.html"
+        }, 
+        {
+            "tags": "", 
+            "text": "First section Second Section", 
+            "title": "Second Chapter", 
+            "url": "/manual/chapter_2.html"
+        }
+    ]
+}

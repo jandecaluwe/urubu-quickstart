@@ -1,5 +1,5 @@
 ---
-title: Get started  
+title: Start  
 layout: page 
 pager: true
 ---

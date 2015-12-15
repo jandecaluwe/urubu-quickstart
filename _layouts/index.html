@@ -18,6 +18,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-7 col-md-offset-2" role="main">
+    <main>
       {% for item in this.content %}
       <h4><a href="{{item.url}}">{{item.title}}</a>
         {% if item.date|d %}
@@ -27,6 +28,7 @@
       <p>{{item.teaser}}</p>
       {% endfor %}
     </div>
+  </main>
   </div>
 </div>
 

@@ -6,8 +6,7 @@ content:
     - content
     - customize
     - deploy
-    - advanced
-    - demo
+    - more 
 tagline:
     Set up your new Urubu project quickly
 ---

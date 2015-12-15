@@ -1,9 +1,9 @@
-brand: Urubu Quickstart
+brand: Quickstart
 
 bootswatch: null # flatly, yeti, lumen,... 
 navbar_inverse: false 
 bootstrap: 3.3.5
-navbar_right_items: 2
+navbar_right_items: 1
 
 reflinks:
     urubu:

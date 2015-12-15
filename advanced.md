@@ -1,5 +1,5 @@
 ---
-title: Advanced 
+title: Advanced features
 layout: page 
 ---
 
@@ -23,22 +23,32 @@ website components, style sheets and javascript functions. You can use
 Bootstrap features to customize your layouts. Alternatively, you can switch to
 another framework altogether.
 
+Search
+======
+
+Urubu supports [Tipue Search][tipuesearch], an open source search solution
+based on Javascript in the browser. Urubu Quickstart has this feature set up.
+To learn more, read the chapter [Search][search] in the manual.
+
 Tags
 ====
 
-Urubu supports tags. This is described in the [manual][2]. 
+Urubu supports tags. This is described in the [manual][tags]. 
 
-[2]: http://urubu.jandecaluwe.com/manual/templating.html#tag-objects
 
 Formulas
 ========
 
 If you would like to create beautiful formulas in your
-Urubu website, check [this post][1].
+Urubu website, check [this post][formulas].
 
-[1]: http://www.jandecaluwe.com/blog/urubu-formulas.html
 
 More info
 =========
 
 For more info, start by reading the [urubu_manual].
+
+[search]: http://urubu.jandecaluwe.com/manual/search.html
+[tags]: http://www.jandecaluwe.com/blog/urubu-formulas.html
+[formulas]: http://urubu.jandecaluwe.com/manual/templating.html#tag-objects
+[tipuesearch]: http://www.tipue.com/search
