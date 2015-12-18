@@ -33,7 +33,8 @@ To learn more, read the chapter [Search][search] in the manual.
 Tags
 ====
 
-Urubu supports tags. This is described in the [manual][tags]. 
+Urubu supports tags. This is described in this [faq][tags-faq] and in the
+[manual][tags]. 
 
 
 Formulas
@@ -49,6 +50,7 @@ More info
 For more info, start by reading the [urubu_manual].
 
 [search]: http://urubu.jandecaluwe.com/manual/search.html
-[tags]: http://www.jandecaluwe.com/blog/urubu-formulas.html
-[formulas]: http://urubu.jandecaluwe.com/manual/templating.html#tag-objects
+[tags]: http://urubu.jandecaluwe.com/manual/templating.html#tag-objects
+[tags-faq]: http://urubu.jandecaluwe.com/faq/tags.html
+[formulas]: http://www.jandecaluwe.com/blog/urubu-formulas.html
 [tipuesearch]: http://www.tipue.com/search
