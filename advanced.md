@@ -15,6 +15,13 @@ All layouts are defined in the `_layout` subdirectory.  They are implemented as
 ones. You can use *template inheritance* to implement just the desired feature
 in a layout, and reuse everything else from the parent layout. 
 
+Templating constructs in pages
+==============================
+
+The use of templating constructs is not limited to layouts: you can use them in
+regular pages also. This is a powerful way to define custom syntax extensions.
+For more info, see [Templating constructs in pages][templating-pages].
+
 Bootstrap
 =========
 
@@ -49,6 +56,7 @@ More info
 
 For more info, start by reading the [urubu_manual].
 
+[templating-pages]: http://urubu.jandecaluwe.com/manual/templating_in_pages.html
 [search]: http://urubu.jandecaluwe.com/manual/search.html
 [tags]: http://urubu.jandecaluwe.com/manual/templating.html#tag-objects
 [tags-faq]: http://urubu.jandecaluwe.com/faq/tags.html
