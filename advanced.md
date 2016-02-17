@@ -1,10 +1,10 @@
 ---
 title: Advanced features
-layout: page 
+layout: page
 ---
 
 Urubu and the technologies behind it offer a wide range of
-additional features. On this page we list some possibilities. 
+additional features. On this page we list some possibilities.
 {.lead}
 
 Layouts
@@ -13,7 +13,7 @@ Layouts
 All layouts are defined in the `_layout` subdirectory.  They are implemented as
 [Jinja2 Templates][jinja2].  You can modify existing layouts or create new
 ones. You can use *template inheritance* to implement just the desired feature
-in a layout, and reuse everything else from the parent layout. 
+in a layout, and reuse everything else from the parent layout.
 
 Templating constructs in pages
 ==============================
@@ -41,7 +41,7 @@ Tags
 ====
 
 Urubu supports tags. This is described in this [faq][tags-faq] and in the
-[manual][tags]. 
+[manual][tags].
 
 
 Formulas
@@ -56,7 +56,7 @@ More info
 
 For more info, start by reading the [urubu_manual].
 
-[templating-pages]: http://urubu.jandecaluwe.com/manual/templating_in_pages.html
+[templating-pages]: http://urubu.jandecaluwe.com/manual/templating-in-pages.html
 [search]: http://urubu.jandecaluwe.com/manual/search.html
 [tags]: http://urubu.jandecaluwe.com/manual/templating.html#tag-objects
 [tags-faq]: http://urubu.jandecaluwe.com/faq/tags.html
