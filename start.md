@@ -1,23 +1,25 @@
 ---
 title: Start  
-layout: page 
+layout: page
 pager: true
 ---
 
 Urubu Quickstart is a companion site of [urubu], a tool to develop static
-websites.  You can use it set up a new Urubu project quickly. 
+websites.  You can use it set up a new Urubu project quickly.
 {.lead}
 
 Usage
 =====
 
 Urubu Quickstart is both a starting point and a tutorial. Just follow
-the steps in the next sections and pages. 
+the steps in the next sections and pages.
 
 Install Urubu
 =============
 
-Urubu requires Python 2.7. You can install it using pip: 
+Urubu works with modern versions of Python 2 and Python 3 using the same
+codebase. More specifically, it requires Python 2.7 or Python 3.4.
+You can install it using pip:
 
 ```
 pip install urubu
@@ -41,7 +43,7 @@ build the website locally.
 *In a separate terminal window*, go into the project directory and run `make
 serve`.  This starts a local web server for the locally built website.  You can
 view it in a browser on [localhost:8000](http://localhost:8000).  Note that it
-is identical to [urubu_quickstart_site]. 
+is identical to [urubu_quickstart_site].
 
 You are now ready to make changes. Keep the local webserver running while
 making changes, so that you can verify them in the browser.
@@ -52,7 +54,7 @@ Set the brand name
 The file `_site.yml` contains project configuration variables.  As a first
 change, edit `_site.yml` and set the `brand` variable to the name of your
 project. Run `make` and the verify the change in the browser, at the left side
-in the top navbar. 
+in the top navbar.
 
 Adapt the home page
 ===================
@@ -60,4 +62,3 @@ Adapt the home page
 The `index.md` file corresponds to the home page of the site. It has a `title`
 and the `tagline` variable that are displayed prominently. Adapt them to your
 project, run `make` and verify the changes.
-
