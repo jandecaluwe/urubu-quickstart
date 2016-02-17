@@ -90,12 +90,14 @@
       <div class="col-md-7" role="main">
       <main>
         <p class="lead">Urubu Quickstart is a companion site of <a href="http://urubu.jandecaluwe.com" title="Urubu">Urubu</a>, a tool to develop static
-websites.  You can use it set up a new Urubu project quickly. </p>
+websites.  You can use it set up a new Urubu project quickly.</p>
 <h2 id="usage">Usage</h2>
 <p>Urubu Quickstart is both a starting point and a tutorial. Just follow
-the steps in the next sections and pages. </p>
+the steps in the next sections and pages.</p>
 <h2 id="install-urubu">Install Urubu</h2>
-<p>Urubu requires Python 2.7. You can install it using pip: </p>
+<p>Urubu works with modern versions of Python 2 and Python 3 using the same
+codebase. More specifically, it requires Python 2.7 or Python 3.4.
+You can install it using pip:</p>
 <div class="codehilite"><pre>pip install urubu
 </pre></div>
 
@@ -110,14 +112,14 @@ build the website locally.</p>
 <p><em>In a separate terminal window</em>, go into the project directory and run <code>make
 serve</code>.  This starts a local web server for the locally built website.  You can
 view it in a browser on <a href="http://localhost:8000">localhost:8000</a>.  Note that it
-is identical to <a href="http://urubu-quickstart.jandecaluwe.com" title="Urubu Quickstart site">Urubu Quickstart site</a>. </p>
+is identical to <a href="http://urubu-quickstart.jandecaluwe.com" title="Urubu Quickstart site">Urubu Quickstart site</a>.</p>
 <p>You are now ready to make changes. Keep the local webserver running while
 making changes, so that you can verify them in the browser.</p>
 <h2 id="set-the-brand-name">Set the brand name</h2>
 <p>The file <code>_site.yml</code> contains project configuration variables.  As a first
 change, edit <code>_site.yml</code> and set the <code>brand</code> variable to the name of your
 project. Run <code>make</code> and the verify the change in the browser, at the left side
-in the top navbar. </p>
+in the top navbar.</p>
 <h2 id="adapt-the-home-page">Adapt the home page</h2>
 <p>The <code>index.md</code> file corresponds to the home page of the site. It has a <code>title</code>
 and the <code>tagline</code> variable that are displayed prominently. Adapt them to your
