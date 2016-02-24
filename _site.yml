@@ -1,8 +1,8 @@
 brand: Quickstart
 
-bootswatch: null # flatly, yeti, lumen,... 
-navbar_inverse: false 
-bootstrap: 3.3.5
+bootswatch: null # flatly, yeti, lumen,...
+navbar_inverse: false
+bootstrap: 3.3.6
 navbar_right_items: 1
 
 reflinks:
@@ -11,10 +11,10 @@ reflinks:
         title: Urubu
     urubu_manual:
         url: http://urubu.jandecaluwe.com/manual
-        title: Urubu Manual 
+        title: Urubu Manual
     urubu_quickstart_site:
         url: http://urubu-quickstart.jandecaluwe.com
-        title: Urubu Quickstart site 
+        title: Urubu Quickstart site
     jandecaluwe:
         url: http://www.jandecaluwe.com
         title: Jan Decaluwe
@@ -25,7 +25,7 @@ reflinks:
         url: http://www.gnu.org/licenses/agpl-3.0.txt
         title: GNU Affero General Public License
     markdown:
-        url: http://daringfireball.net/projects/markdown/  
+        url: http://daringfireball.net/projects/markdown/
         title: Markdown
     jinja2:
         url: http://jinja.pocoo.org
