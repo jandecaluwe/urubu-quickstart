@@ -6,7 +6,8 @@ bootstrap: 3.3.6
 navbar_right_items: 1
 
 # Uncomment and fill out your Google Analytics ID
-#google_analytics: UA-1234567-8
+google_analytics: UA-48968311-4
+
 
 reflinks:
     urubu:
