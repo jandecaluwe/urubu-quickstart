@@ -5,6 +5,9 @@ navbar_inverse: false
 bootstrap: 3.3.6
 navbar_right_items: 1
 
+# Uncomment and fill out your Google Analytics ID
+#google_analytics: UA-1234567-8
+
 reflinks:
     urubu:
         url: http://urubu.jandecaluwe.com
