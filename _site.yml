@@ -5,7 +5,7 @@ navbar_inverse: false
 bootstrap: 3.3.6
 navbar_right_items: 1
 
-# Uncomment and fill out your Google Analytics ID
+# Fill out your Google Analytics ID here
 google_analytics: UA-48968311-4
 
 
