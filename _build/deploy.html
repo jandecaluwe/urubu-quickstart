@@ -100,9 +100,8 @@ itself.  Technically, this is accomplished by maintaining the website content
 on a specific branch, called <code>gh-pages</code>.</p>
 <p>If you use git and GitHub, you can deploy your website to GitHub
 pages with the following command:</p>
-<div class="codehilite"><pre><span></span>git subtree push --prefix _build origin gh-pages    
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>git subtree push --prefix _build origin gh-pages    
+</code></pre></div>
 
 <p>When the <code>gh-pages</code> branch does not exist yet it will be created.
 It is a good idea to put the command in the Makefile to make it
